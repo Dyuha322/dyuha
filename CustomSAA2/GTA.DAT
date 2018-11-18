@@ -1,0 +1,55 @@
+#
+# Данный файл GTA.Dat принадлежит команде Crimea Mechanics Team.
+# Основа была написана студией RockStar Games.
+# Автор: Трафимов Андрей Андреевич "MeshMan".
+# Дата: 29.06.2018
+# Запрещено использовать наработки команды Crimea Mechanics Team КОПИРАЙТ.
+#
+# Архивы IMG.
+
+IMG SAMP\SAMPCOL.IMG
+IMG MODELS\GTACRIMEA.IMG
+
+# Информация Сцен.
+
+SPLASH loadsc2
+
+# Путь к текстовым файлам IDE.
+
+IDE DATA\MAPS\generic\vegepart.IDE
+IDE DATA\MAPS\generic\barriers.IDE
+IDE DATA\MAPS\generic\dynamic.IDE
+IDE DATA\MAPS\generic\dynamic2.IDE
+IDE DATA\MAPS\generic\multiobj.IDE
+IDE DATA\MAPS\generic\procobj.IDE
+IDE DATA\MAPS\leveldes\levelmap.IDE
+IDE DATA\MAPS\leveldes\levelxre.IDE
+IDE DATA\MAPS\cmt\cmt1.IDE
+
+# Модели тюнинга авто.
+
+IDE DATA\MAPS\veh_mods\veh_mods.IDE
+
+# txd деталей.
+
+IDE DATA\TXDCUT.IDE
+
+# sa-mp дополнение
+
+IDE SAMP\samp.IDE
+IDE SAMP\custom.IDE
+
+# Map Zone / Info Zone
+
+IPL DATA\MAP.ZON
+IPL DATA\INFO.ZON
+
+# Информация Сцен.
+
+SPLASH loadsc2
+
+# Путь к текстовым файлам IPL.
+
+IPL DATA\MAPS\cmt\cmt1.IPL
+IPL DATA\MAPS\cmt\props_1_kerch.IPL
+

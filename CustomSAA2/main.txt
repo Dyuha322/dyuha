@@ -1,0 +1,65 @@
+// This file was decompiled using SASCM.ini published by GTAG (http://gtag.gtagaming.com/opcode-database) on 14.6.2013
+DEFINE OBJECTS 1
+DEFINE OBJECT SANNY BUILDER 3.2.2     
+
+DEFINE MISSIONS 0
+
+DEFINE EXTERNAL_SCRIPTS 0 // Use -1 in order not to compile AAA script
+
+DEFINE UNKNOWN_EMPTY_SEGMENT 0
+
+DEFINE UNKNOWN_THREADS_MEMORY 0
+
+//-------------MAIN---------------
+thread 'MAIN' 
+fade 0 0 
+042C: set_total_missions_to 0 
+030D: set_max_progress 0 
+01F0: set_max_wanted_level_to 6 
+set_wb_check_to 0 
+00C0: set_current_time_hours_to 12 minutes_to 0 
+$7 = -14.4136 
+$6 = 17.6679 
+$5 = 18.7039 
+04E4: refresh_game_renderer_at $7 $6 
+Camera.SetAtPos($7, $6, $5)
+062A: change_float_stat 165 to 999.0 
+062A: change_float_stat 23 to 999.0 
+062A: change_float_stat 21 to 0.0 
+062A: change_float_stat 163 to 999.0 
+062A: change_float_stat 160 to 999.0 
+062A: change_float_stat 229 to 999.0 
+062A: change_float_stat 223 to 999.0 
+062A: change_float_stat 230 to 999.0 
+0629: change_integer_stat 181 to 4 
+0629: change_integer_stat 68 to 0 
+$PLAYER_CHAR = Player.Create(0, $7, $6, $5)
+07AF: $PLAYER_GROUP = player $PLAYER_CHAR group 
+$PLAYER_ACTOR = Actor.EmulateFromPlayer($PLAYER_CHAR)
+Camera.SetBehindPlayer
+Actor.Angle($PLAYER_ACTOR) = 262.0
+set_weather 8 
+Player.SetClothes($PLAYER_CHAR, "BBALLJACKRSTAR", "BBJACK", Torso)
+Player.SetClothes($PLAYER_CHAR, "JEANSDENIM", "JEANS", Legs)
+Player.SetClothes($PLAYER_CHAR, "SNEAKERBINCBLK", "SNEAKER", Shoes)
+Player.SetClothes($PLAYER_CHAR, "PLAYER_FACE", "HEAD", Head)
+Player.Build($PLAYER_CHAR)
+select_interior 0 
+Player.CanMove($PLAYER_CHAR) = True
+01B7: release_weather 
+016C: restart_if_wasted_at $7 $6 $5 angle 0.0 town_number 0 
+Model.Load(#HYDRA)
+
+:MAIN_383
+wait 0 
+if 
+   Model.Available(#HYDRA)
+else_jump @MAIN_383 
+Actor.PutAt($PLAYER_ACTOR, $7, $6, $5)
+fade 1 1000 
+wait 100 
+03E6: remove_text_box 
+
+:MAIN_430
+wait 2500 
+jump @MAIN_430 
